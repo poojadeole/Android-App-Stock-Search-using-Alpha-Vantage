@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.poojadeole.homework9final.MainActivity"
+    android:background="@drawable/restaurant">
+
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="71dp"
+        android:layout_marginRight="69dp"
+        android:layout_marginTop="133dp"
+        android:onClick="sendMessage"
+        android:text="Get Quote"
+        android:layout_marginStart="21dp"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="20dp"
+        android:layout_alignParentTop="true"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_alignStart="@+id/autoCompleteTextView" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Clear"
+        android:layout_marginRight="56dp"
+        android:layout_marginEnd="21dp"
+        android:layout_above="@+id/favtable"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="20dp"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_alignEnd="@+id/autoCompleteTextView" />
+
+    <AutoCompleteTextView
+        android:id="@+id/autoCompleteTextView"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:textColor="#FFFFFF"
+        android:ems="10"
+        android:text=""
+        android:completionThreshold="1"
+        android:layout_marginBottom="15dp"
+        android:layout_above="@+id/button2"
+        android:layout_alignParentStart="true">
+
+    </AutoCompleteTextView>
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/favtable"
+        android:layout_width="345dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="120dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_below="@+id/button"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true">
+    </android.support.v7.widget.RecyclerView>
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="40dp"
+        android:text="Stock Market Search"
+        android:textColor="#FFFFFF"
+        android:textSize="31dp"
+        android:layout_marginBottom="11dp"
+        android:layout_above="@+id/autoCompleteTextView"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/button"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="8dp"
+        android:text="Favorites"
+        android:textColor="#FFFFFF"
+        android:textSize="25dp"/>
+
+    <Switch
+        android:id="@+id/toggle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#FFFFFF"
+        android:textOn="On"
+        android:textOff="Off"
+        android:layout_alignBottom="@+id/textView5"
+        android:layout_alignEnd="@+id/button2" />
+
+    <TextView
+        android:id="@+id/autoRefresh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#FFFFFF"
+        android:text="AutoRefresh"
+        android:layout_alignBaseline="@+id/toggle"
+        android:layout_alignBottom="@+id/toggle"
+        android:layout_toStartOf="@+id/toggle"
+        android:layout_marginEnd="22dp" />
+
+    <ImageButton
+        android:id="@+id/refresh"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:scaleType="fitCenter"
+        android:src="@android:drawable/ic_popup_sync"
+        android:background="@android:color/transparent"
+        android:layout_alignTop="@+id/textView5"
+        android:layout_alignEnd="@+id/favtable" />
+
+    <Spinner
+        android:id="@+id/sortSpinner"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/refresh"
+        android:layout_alignStart="@+id/textView5"
+        android:layout_marginStart="12dp" />
+
+    <Spinner
+        android:id="@+id/orderSpinner"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/sortSpinner"
+        android:layout_toEndOf="@id/sortSpinner"/>
+
+
+</RelativeLayout>

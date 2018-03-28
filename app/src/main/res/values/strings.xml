@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Stock News</string>
+    <string name="title_activity_send_string">SendString</string>
+    <string name="action_settings">Settings</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+    <string name="facebook_app_id">166172813978375</string>
+    <string name="share">Share</string>
+</resources>
